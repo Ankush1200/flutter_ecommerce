@@ -4,7 +4,7 @@ import 'package:flutter_ecommerce/common/widgets/custom_btn.dart';
 import 'package:flutter_ecommerce/common/widgets/custom_text_feild.dart';
 import 'package:flutter_ecommerce/common/widgets/logo_container.dart';
 import 'package:flutter_ecommerce/constants/consts.dart';
-import 'package:flutter_ecommerce/constants/social_icon.dart';
+import 'package:flutter_ecommerce/constants/images_list.dart';
 import 'package:flutter_ecommerce/features/auth/forget_password.dart';
 import 'package:flutter_ecommerce/features/auth/signup.dart';
 import 'package:flutter_ecommerce/features/home/home.dart';

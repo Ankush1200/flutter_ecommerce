@@ -11,7 +11,7 @@ Widget logoContainerWidget(){
         color: AppColors.whiteColor,
       ),
       child: Center(
-          child: Image.asset(icAppLogo,height: 60,
+          child: Image.asset(icAppLogo,height: 60,color:const Color.fromARGB(255, 161, 14, 63),
       )),
     );
 }

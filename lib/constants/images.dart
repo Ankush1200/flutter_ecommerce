@@ -51,7 +51,7 @@ const icWholeSale = "assets/icons/wholesale.png";
 
 //App Images
 
-const imgBackground = "assets/icons/bg.png";
+const imgBackground = "assets/icons/bg.jpg";
 const imgB1 = "assets/images/b1.jpeg";
 const imgB2 = "assets/images/b2.jpeg";
 const imgB3 = "assets/images/b3.jpeg";

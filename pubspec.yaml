@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.6
   fluttertoast: ^8.2.6
   another_flushbar: ^1.12.30
+  velocity_x: ^4.2.1
 
 dev_dependencies:
   flutter_test:
