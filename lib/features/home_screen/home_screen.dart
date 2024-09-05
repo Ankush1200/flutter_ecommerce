@@ -164,7 +164,7 @@ class HomeScreen extends StatelessWidget{
               }),
               const SizedBox(height: 10,),
               GridView.builder(
-                itemCount: gridImages.length,
+                itemCount:6,
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
@@ -179,10 +179,10 @@ class HomeScreen extends StatelessWidget{
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(gridImages[index],height: 200,fit: BoxFit.fill,),
-                      Text(gridNames[index]),
+                      Image.asset(imgFc11,height: 170,fit: BoxFit.fill,),
+                      const Text("Ladies Suit"),
                       const SizedBox(height: 2),
-                      Text(gridPrice[index])
+                      const Text("₹2586")
                     ],
                   ),
                 );

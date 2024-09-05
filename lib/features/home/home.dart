@@ -12,7 +12,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     var controller=Get.put(HomeController());
     var navBarItems=[
       BottomNavigationBarItem(icon:Image.asset(icHome,width: 20,),label: 'Home'),
@@ -23,7 +22,7 @@ class Home extends StatelessWidget {
 
     var navBarBody=[
        const HomeScreen(),
-      //  const CategoriesScreen(),
+       const CategoriesScreen(),
        const CartScreen(),
        const ProfileScreen(),
     ];

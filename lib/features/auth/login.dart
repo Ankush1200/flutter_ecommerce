@@ -74,10 +74,16 @@ class _LoginScreenState extends State<LoginScreen> {
                         }, child:const Text("Forget Password?",style:AppStyling.heading2 ,)),
                       ),
                       const SizedBox(height:10,),
-                      customElevatedBtn('Log In',(){
-                        Get.to(()=>const Home());
-                      },AppColors.redColor,
-                      AppColors.whiteColor,
+                      Row(
+                        children: [
+                          Expanded(
+                            child: customElevatedBtn('Log In',(){
+                              Get.to(()=>const Home());
+                            },AppColors.redColor,
+                            AppColors.whiteColor,
+                            ),
+                          ),
+                        ],
                       ),
                       const SizedBox(height: 10,),
                       const Align(
@@ -86,10 +92,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           color: Colors.indigo                                                                                                                                                                                                                                                                                                                                                                 
                       ))),
                       const SizedBox(height: 10,),
-                      customElevatedBtn('SignUp',(){
-                        Get.to(()=>const SignUpScreen());
-                      },AppColors.lightgolden,
-                      AppColors.redColor
+                      Row(
+                        children: [
+                          Expanded(
+                            child: customElevatedBtn('SignUp',(){
+                              Get.to(()=>const SignUpScreen());
+                            },AppColors.lightgolden,
+                            AppColors.redColor
+                            ),
+                          ),
+                        ],
                       ),
                       const SizedBox(height: 10,),
                       const Align(

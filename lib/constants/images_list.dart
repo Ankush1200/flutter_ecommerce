@@ -1,5 +1,6 @@
 import 'package:flutter_ecommerce/constants/consts.dart';
 
+// Social Media Icons
 List socialMediaIcons=[
   icFacebookLogo,
   icGoogleLogo,
@@ -40,12 +41,17 @@ List featuredProductsPrice=["₹64,999","₹5999","₹78,949","₹499","₹599"]
 
 
 // Featured Product Images List
-List gridImages=[imgFc1,imgFc2,imgFc3,imgFc4,imgFc5,imgFc6];
-List gridNames=["Men's Blazer(Size:M)","Laptop Redmi(16/512)","BMW Coupe","Kid Gemetory","Kid Toyes","I Phone 15Pro"];
-List gridPrice=["₹5896","₹48599","₹6,25,8,254","₹499","₹799","₹1,50,000"];
+List gridImages=[imgFc11,imgFc2,imgFc3,imgFc4,imgFc5,imgFc6];
+List gridNames=["Ledies Suit(Size:M)","Laptop Redmi(16/512)","BMW Coupe","Kid Gemetory","Kid Toyes","I Phone 15Pro"];
+List gridPrice=["₹2896","₹48599","₹6,25,8,254","₹499","₹799","₹1,50,000"];
 
 
 // Categories Images List
-List categoriesImages=[imgFc1,imgFc2,imgFc3,imgFc4,imgFc5,imgFc6,imgFc7,imgFc8,imgFc9];
-List categoriesName=["Men's Blazer(Size:M)","Laptop Redmi(16/512)","BMW Coupe","Kid Gemetory","Kid Toyes","I Phone 15Pro","hihb","hbhjbj","jiohb"];
+List categoriesImages=[imgFc1,imgFc2,imgFc3,imgFc4,imgFc5,imgFc6,imgFc7,imgS10,imgFc9];
+List categoriesName=[menClothingFashion,compAccess,automobile,kidtoys,sports,cellphone,makeupKit,womenDress,furniture];
 List categoriesPrice=["₹5896","₹48599","₹6,25,8,254","₹499","₹799","₹1,50,000","7167","6874","56465"];
+
+// Profile Items
+
+List profileTitle=[wishlist,oreder,messages];
+List profileIcons=[icOrder,icOrder,icMessages];

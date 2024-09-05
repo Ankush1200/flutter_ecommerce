@@ -72,10 +72,16 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                         'Confirm Password',
                       ),
                       const SizedBox(height: 10,),
-                      customElevatedBtn('Reset',(){
-                        
-                      },AppColors.redColor,
-                      AppColors.whiteColor,
+                      Row(
+                        children: [
+                          Expanded(
+                            child: customElevatedBtn('Reset',(){
+                              
+                            },AppColors.redColor,
+                            AppColors.whiteColor,
+                            ),
+                          ),
+                        ],
                       ),
                       const SizedBox(height: 10,),
                        Row(

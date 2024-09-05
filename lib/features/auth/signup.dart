@@ -142,35 +142,41 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       const SizedBox(
                         height: 10,
                       ),
-                      customElevatedBtn(
-                        'SignUp',
-                        () {
-                          if (value == true) {
-                            // Get.to(() => const ForgetPasswordScreen());
-                          } else {
-                            Fluttertoast.showToast(
-                              msg: "Accept Terms & Conditions",
-                              fontSize: 14,
-                              toastLength: Toast.LENGTH_SHORT,
-                              gravity: ToastGravity.BOTTOM,
-                              timeInSecForIosWeb: 1,
-                              backgroundColor:
-                                  const Color.fromARGB(195, 86, 75, 74),
-                              textColor: Colors.white,
-                            );
-                            // Flushbar(
-                            //   message: 'Accept Terms & Conditions',
-                            //   duration: Duration(seconds: 3),
-                            //   flushbarPosition: FlushbarPosition.TOP,
-                            //   backgroundColor:  Color.fromARGB(195, 86, 75, 74),
-                            //   borderRadius: BorderRadius.circular(30),    
-                            //   padding: EdgeInsets.all(10),                          
-                            //   maxWidth:250
-                            // )..show(context);
-                          }
-                        },
-                        value? AppColors.redColor: const Color.fromARGB(255, 220, 173, 175),
-                        AppColors.whiteColor,
+                      Row(
+                        children: [
+                          Expanded(
+                            child: customElevatedBtn(
+                              'SignUp',
+                              () {
+                                if (value == true) {
+                                  // Get.to(() => const ForgetPasswordScreen());
+                                } else {
+                                  Fluttertoast.showToast(
+                                    msg: "Accept Terms & Conditions",
+                                    fontSize: 14,
+                                    toastLength: Toast.LENGTH_SHORT,
+                                    gravity: ToastGravity.BOTTOM,
+                                    timeInSecForIosWeb: 1,
+                                    backgroundColor:
+                                        const Color.fromARGB(195, 86, 75, 74),
+                                    textColor: Colors.white,
+                                  );
+                                  // Flushbar(
+                                  //   message: 'Accept Terms & Conditions',
+                                  //   duration: Duration(seconds: 3),
+                                  //   flushbarPosition: FlushbarPosition.TOP,
+                                  //   backgroundColor:  Color.fromARGB(195, 86, 75, 74),
+                                  //   borderRadius: BorderRadius.circular(30),    
+                                  //   padding: EdgeInsets.all(10),                          
+                                  //   maxWidth:250
+                                  // )..show(context);
+                                }
+                              },
+                              value? AppColors.redColor: const Color.fromARGB(255, 220, 173, 175),
+                              AppColors.whiteColor,
+                            ),
+                          ),
+                        ],
                       ),
                       const SizedBox(
                         height: 10,

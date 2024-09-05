@@ -21,3 +21,22 @@ const searchanything = "Search anything ... ",
   girlsDress = "Girls Dresses",
   featuredCategories = "Featured Categories",
   featuredProducts="Featured Products";
+
+// Categories Strings
+const womenClothing = "Women Clothing",
+  compAccess = "Computer & Accessories",
+  menClothingFashion = "Men Clothing & Fashion",
+  automobile = "Automobile",
+  kidtoys = "Kids & Toys",
+  sports = "Sports",
+  makeupKit = "Makeup Kit",
+  cellphone = "Cellphone & Tab",
+  furniture = "Furniture";
+
+// item Details Page List
+const listNames=["Images","Ratings","Reviews","Seller Policy","Return Policy"];
+
+// Profile Strings
+const wishlist='My Wishlist',
+  oreder='My Orders',
+  messages='My Messages';
