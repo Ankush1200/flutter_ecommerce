@@ -3,13 +3,18 @@ import 'package:flutter_ecommerce/common/widgets/container_bag.dart';
 import 'package:flutter_ecommerce/common/widgets/custom_btn.dart';
 import 'package:flutter_ecommerce/constants/consts.dart';
 import 'package:flutter_ecommerce/constants/images_list.dart';
+import 'package:flutter_ecommerce/features/auth/login.dart';
 import 'package:flutter_ecommerce/features/profile/widgets/custom_container.dart';
+import 'package:flutter_ecommerce/services/authentication.dart';
+import 'package:get/get.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var controller=Get.put(Authentication());
     return backgroundContainer(
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -29,7 +34,13 @@ class ProfileScreen extends StatelessWidget {
                   Text('ankush49054@gmail.com',style: TextStyle(color: Color.fromARGB(255, 100, 85, 85)))
                 ],),
                 customElevatedBtn(
-                'Edit', (){}, Colors.white, Colors.grey)
+                'logOut', ()async{
+                  await controller.logOut();
+                  Get.offAll(()=>const LoginScreen());
+                  VxToast.show(bgColor: AppColors.redColor,
+                    textColor: Colors.white,
+                    context, msg: 'Logged out succesfully');
+                }, Colors.white, Colors.grey)
               ],
             ),
             const SizedBox(height:50,width: double.infinity,),

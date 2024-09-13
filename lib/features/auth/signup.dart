@@ -5,8 +5,12 @@ import 'package:flutter_ecommerce/common/widgets/custom_text_feild.dart';
 import 'package:flutter_ecommerce/common/widgets/logo_container.dart';
 import 'package:flutter_ecommerce/constants/consts.dart';
 import 'package:flutter_ecommerce/features/auth/login.dart';
+import 'package:flutter_ecommerce/features/home/home.dart';
+import 'package:flutter_ecommerce/features/home_screen/home_screen.dart';
+import 'package:flutter_ecommerce/services/authentication.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -17,9 +21,14 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   bool value = false;
+  TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
+  TextEditingController createPasswordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
 
-  TextEditingController passwordController = TextEditingController();
+  var controller=Get.put(Authentication());
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -69,23 +78,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       customTextFeild(
-                        emailController,
+                        nameController,
                         'Name',
+                        false
                       ),
                       const SizedBox(height: 10),
                       customTextFeild(
-                        passwordController,
+                        emailController,
                         'Email',
+                        false
                       ),
                       const SizedBox(height: 10),
                       customTextFeild(
-                        passwordController,
+                        createPasswordController,
                         'Create Password',
+                        true
                       ),
                       const SizedBox(height: 10),
                       customTextFeild(
-                        passwordController,
+                        confirmPasswordController,
                         'Confirm Password',
+                        true
                       ),
                       const SizedBox(
                         height: 10,
@@ -148,8 +161,34 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             child: customElevatedBtn(
                               'SignUp',
                               () {
-                                if (value == true) {
-                                  // Get.to(() => const ForgetPasswordScreen());
+                                if (value == true){
+                                  try{
+                                    if(nameController.text.isEmpty&& emailController.text.isEmpty
+                                      && createPasswordController.text.isEmpty&& confirmPasswordController.text.isEmpty ){
+                                        VxToast.show(
+                                          bgColor: AppColors.redColor,
+                                          textColor: Colors.white,
+                                          context,msg: 'All Fields is *required');
+                                      }else{
+                                        controller.signUp(
+                                    email: emailController.text.trim(),
+                                    password: createPasswordController.text.trim(),
+                                    context: context,
+                                  ).then((value){
+                                    return controller.dataStorage(
+                                      name: nameController.text.trim(),
+                                      email: emailController.text.trim(),
+                                      password: createPasswordController.text.trim(),
+                                    );
+                                  }).then((value){
+                                    Get.offAll(()=>const Home());
+                                    VxToast.show(bgColor: AppColors.redColor,textColor: Colors.white,
+                                      context,msg: 'SignUp Successfully');
+                                    });
+                                    }
+                                  }catch(e){
+                                    VxToast.show(context, msg: '$e');
+                                  }
                                 } else {
                                   Fluttertoast.showToast(
                                     msg: "Accept Terms & Conditions",
@@ -157,19 +196,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     toastLength: Toast.LENGTH_SHORT,
                                     gravity: ToastGravity.BOTTOM,
                                     timeInSecForIosWeb: 1,
-                                    backgroundColor:
-                                        const Color.fromARGB(195, 86, 75, 74),
+                                    backgroundColor:const Color.fromARGB(195, 86, 75, 74),
                                     textColor: Colors.white,
                                   );
-                                  // Flushbar(
-                                  //   message: 'Accept Terms & Conditions',
-                                  //   duration: Duration(seconds: 3),
-                                  //   flushbarPosition: FlushbarPosition.TOP,
-                                  //   backgroundColor:  Color.fromARGB(195, 86, 75, 74),
-                                  //   borderRadius: BorderRadius.circular(30),    
-                                  //   padding: EdgeInsets.all(10),                          
-                                  //   maxWidth:250
-                                  // )..show(context);
                                 }
                               },
                               value? AppColors.redColor: const Color.fromARGB(255, 220, 173, 175),

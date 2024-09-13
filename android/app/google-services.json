@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177583335703",
+    "project_id": "vmart-a1bb8",
+    "storage_bucket": "vmart-a1bb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177583335703:android:5ea62d6a04083f40152f52",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbEnLV9CLOFeLMINIjz5rLBBRrlSDvk78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

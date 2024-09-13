@@ -60,16 +60,19 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                       customTextFeild(
                         passwordController,
                         'Email',
+                        false
                       ),
                       const SizedBox(height:10),
                       customTextFeild(
                         passwordController,
                         'New Password',
+                        true
                       ),
                       const SizedBox(height:10),
                       customTextFeild(
                         passwordController,
                         'Confirm Password',
+                        true,
                       ),
                       const SizedBox(height: 10,),
                       Row(

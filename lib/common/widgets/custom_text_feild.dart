@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce/constants/consts.dart';
 
-Widget customTextFeild(TextEditingController?controller,String hintname){
+Widget customTextFeild(TextEditingController?controller,String hintname,bool ishide){
   return TextFormField(
+    obscureText: ishide,
     controller: controller,
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
