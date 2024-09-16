@@ -20,6 +20,16 @@ Introducing Quick Mart, an online shopping application that lets users browse pr
   - **Firebase Services:** Authentication, Cloud firestore, firebase Storage.
   - **GetX:**
 
+## Screenshots
+<div style=align-items: center;>
+  <img width=200px height=450px src="screenshots/1.jpg">
+  <img width=200px height=450px src="screenshots/2.jpg">
+  <img width=200px height=450px src="screenshots/3.jpg">
+  <img width=200px height=450px src="screenshots/4.jpg">
+  <img width=200px height=450px src="screenshots/5.jpg">
+  <img width=200px height=450px src="screenshots/6.jpg">
+  <img width=200px height=450px src="screenshots/7.jpg">
+</div>
 
 ## Installation Process
 
