@@ -11,14 +11,14 @@ Introducing Quick Mart, an online shopping application that lets users browse pr
   - **Searching Products:** User can search the products by their names.
  
 ## Additional Features
-  - **SignUp/Login** User can effortlessly create new account or loged in with existing one.
-  - **Forget Password** Password can be reset after forgeting.
-  - **Google SignUP** User can signup with their loged in google accounts.
+  - **SignUp/Login:** User can effortlessly create new account or loged in with existing one.
+  - **Forget Password:** Password can be reset after forgeting.
+  - **Google SignUP:** User can signup with their loged in google accounts.
 
 ## Technology
-  - **Flutter & Dart** 
-  - **Firebase Services** Authentication, Cloud firestore, firebase Storage.
-  - **GetX**
+  - **Flutter & Dart:** 
+  - **Firebase Services:** Authentication, Cloud firestore, firebase Storage.
+  - **GetX:**
 
 
 ## Installation Process
