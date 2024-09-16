@@ -29,6 +29,7 @@ Introducing Quick Mart, an online shopping application that lets users browse pr
   <img width=200px height=450px src="screenshots/5.jpg">
   <img width=200px height=450px src="screenshots/6.jpg">
   <img width=200px height=450px src="screenshots/7.jpg">
+  <img width=200px height=450px src="screenshots/8.jpg">
 </div>
 
 ## Installation Process
